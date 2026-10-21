@@ -1,0 +1,113 @@
+name: Bug report
+description: Report installation, connection, control or profile problems.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Search [existing reports](https://github.com/polyphonic/ulanzi-ableton/issues) first. Share one problem per report. Screenshots or a short video help but are optional; text-only reports are welcome. Redact personal information from screenshots and logs."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does the problem occur?
+      options:
+        - Installation or update
+        - Connection / Basic / Offline
+        - Buttons, knobs or displayed values
+        - Profiles or Marketplace download
+        - Translation
+        - Other / unsure
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Ulanzi Dial
+        - D200
+        - D200H
+        - D200X
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system and version
+      placeholder: "Windows 11 24H2 or macOS 15.6"
+    validations:
+      required: true
+  - type: input
+    id: live_version
+    attributes:
+      label: Ableton Live version and edition
+      description: Copy the full version from Live's About screen.
+      placeholder: "12.x.x Suite / Standard / Intro / Lite"
+    validations:
+      required: true
+  - type: input
+    id: studio_version
+    attributes:
+      label: Ulanzi Studio version
+      description: Copy the version from Studio's About screen.
+    validations:
+      required: true
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Ableton plugin version
+      description: Include the installed plugin version, or say unknown if installation failed.
+    validations:
+      required: true
+  - type: input
+    id: profile
+    attributes:
+      label: Profile and installation source
+      description: Profile name/version and OS variant, Marketplace or manual import, and any custom mappings. Say no profile if you added actions manually.
+    validations:
+      required: true
+  - type: input
+    id: locale
+    attributes:
+      label: Languages and keyboard layout
+      description: Studio language, Live language, OS language and keyboard layout.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Name the page and exact button or knob. For a turn, say whether you held it down and what was selected in Live.
+      placeholder: |
+        1. Open…
+        2. Select…
+        3. Press or turn…
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior
+      description: Which exact buttons, knobs or values are affected? Does it happen every time?
+    validations:
+      required: true
+  - type: textarea
+    id: connection
+    attributes:
+      label: Integration details (for Basic/Offline or connection problems)
+      description: Complete this for connection problems. You do not need to move your User Library. See SUPPORT.md for setup and log locations.
+      placeholder: |
+        Integration status and any connection error:
+        Installed / bundled Remote Script versions (if shown):
+        Control Surface / Input / Output in Live:
+        User Library: default / custom / external / cloud (no full personal path needed)
+        What changes after restarting Live, Studio, or the computer:
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Video, screenshots or relevant log lines
+      description: Optional. Show settings and the failing action, or attach relevant Live Log.txt / Studio plugin error lines. For shared links, ensure reviewers can view them without requesting access. Avoid full projects, private email chains and unredacted personal paths.
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing reports for the same problem.
+          required: true

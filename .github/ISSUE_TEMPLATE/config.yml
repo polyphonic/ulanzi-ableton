@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup and connection help
+    url: https://github.com/polyphonic/ulanzi-ableton/blob/main/SUPPORT.md
+    about: Check setup, Basic/Offline status and which logs help.
+  - name: Ulanzi Studio, hardware or other profiles
+    url: https://bbs.ulanzistudio.com/
+    about: Ask Ulanzi about generic mouse-wheel actions, Vibe coding or device/Studio issues.
